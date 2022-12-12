@@ -1,0 +1,9 @@
+# Python dependencies
+python-language-server
+
+# Opentestfactory dependencies
+squash-tf-services
+
+# Robotframework libraries
+robotframework
+robotframework-browser

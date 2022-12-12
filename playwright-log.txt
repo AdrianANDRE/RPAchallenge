@@ -1,0 +1,271 @@
+{"level":30,"time":"2022-12-12T08:04:58.712Z","pid":501,"hostname":"NXQLX146","msg":"Listening on 49145"}
+{"level":30,"time":"2022-12-12T08:04:58.736Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:04:58.736Z","pid":501,"hostname":"NXQLX146","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:04:58.740Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:04:58.740Z","pid":501,"hostname":"NXQLX146","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:04:58.751Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2022-12-12T08:04:59.746Z","pid":501,"hostname":"NXQLX146","msg":"End of node method newBrowser"}
+{"level":30,"time":"2022-12-12T08:04:59.750Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method newContext"}
+{"level":30,"time":"2022-12-12T08:04:59.750Z","pid":501,"hostname":"NXQLX146","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-12-12T08:04:59.750Z","pid":501,"hostname":"NXQLX146","msg":"Trace file: "}
+{"level":30,"time":"2022-12-12T08:04:59.797Z","pid":501,"hostname":"NXQLX146","msg":"Changed active context"}
+{"level":30,"time":"2022-12-12T08:04:59.797Z","pid":501,"hostname":"NXQLX146","msg":"End of node method newContext"}
+{"level":30,"time":"2022-12-12T08:04:59.800Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method newPage"}
+{"level":30,"time":"2022-12-12T08:04:59.800Z","pid":501,"hostname":"NXQLX146","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-12-12T08:05:00.649Z","pid":501,"hostname":"NXQLX146","msg":"Video path: undefined"}
+{"level":30,"time":"2022-12-12T08:05:00.649Z","pid":501,"hostname":"NXQLX146","msg":"Changed active page"}
+{"level":30,"time":"2022-12-12T08:05:02.764Z","pid":501,"hostname":"NXQLX146","msg":"End of node method newPage"}
+{"level":30,"time":"2022-12-12T08:05:02.767Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:02.768Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with xpath=//button[contains(text(),\"Start\")] in page."}
+{"level":30,"time":"2022-12-12T08:05:02.894Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:02.919Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:02.919Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:02.992Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:02.995Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:02.996Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.029Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.033Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.033Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.066Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.069Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.069Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.099Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.102Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.102Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.129Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.131Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.132Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.161Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.164Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.164Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.194Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.197Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:03.197Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.300Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:03.305Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.305Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.332Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.334Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.334Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.360Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.362Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.362Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.389Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.392Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.392Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.415Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.418Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.418Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.446Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.448Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.448Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.472Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.475Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.475Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.499Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.502Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:03.502Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.599Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:03.603Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.603Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.630Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.632Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.632Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.659Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.661Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.662Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.685Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.689Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.689Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.711Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.713Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.713Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.735Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.739Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.739Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.761Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.763Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.763Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.787Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.789Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:03.789Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.892Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:03.897Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.897Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.921Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.924Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.924Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.945Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.948Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.948Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.972Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.975Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.975Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:03.997Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:03.999Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.000Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.026Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.029Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.029Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.051Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.054Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.054Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.079Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.081Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.081Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.176Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.181Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.181Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.211Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.214Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.214Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.234Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.237Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.237Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.258Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.260Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.260Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.283Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.285Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.286Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.312Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.314Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.314Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.338Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.341Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.341Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.365Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.368Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.368Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.466Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.471Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.471Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.495Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.497Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.497Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.518Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.521Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.521Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.545Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.547Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.547Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.570Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.572Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.572Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.593Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.596Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.596Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.616Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.619Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.619Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.639Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.642Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.642Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.748Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.753Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.753Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.778Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.780Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.780Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.802Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.805Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.805Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.828Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.831Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.831Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.851Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.855Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.855Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.876Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.878Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.878Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.899Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.902Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.902Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:04.926Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:04.928Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:04.929Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.017Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.024Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.024Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.050Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.053Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.053Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.074Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.077Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.077Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.099Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.101Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.101Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.125Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.127Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.127Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.149Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.151Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.151Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.172Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.175Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.175Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.196Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.198Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.198Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.305Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.310Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.310Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.332Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.335Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.335Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.357Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.360Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.360Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.381Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.383Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.383Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.410Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.412Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.412Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.434Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.437Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.437Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.460Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.462Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.462Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.483Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.485Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.486Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.569Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.575Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.575Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelFirstName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.601Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.604Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.604Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelLastName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.625Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.628Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.628Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelCompanyName\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.647Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.649Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.649Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelRole\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.669Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.672Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.672Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelAddress\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.693Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.695Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.695Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelEmail\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.719Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.721Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.721Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@ng-reflect-name=\"labelPhone\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.741Z","pid":501,"hostname":"NXQLX146","msg":"End of node method fillText"}
+{"level":30,"time":"2022-12-12T08:05:05.744Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.744Z","pid":501,"hostname":"NXQLX146","msg":"Strict mode is enabled, find Locator with //input[@value=\"Submit\"] in page."}
+{"level":30,"time":"2022-12-12T08:05:05.850Z","pid":501,"hostname":"NXQLX146","msg":"End of node method click"}
+{"level":30,"time":"2022-12-12T08:05:05.855Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2022-12-12T08:05:05.914Z","pid":501,"hostname":"NXQLX146","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2022-12-12T08:05:05.918Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2022-12-12T08:05:05.928Z","pid":501,"hostname":"NXQLX146","msg":"Removed page=0f6fce86-e5cc-4617-8876-84d72a67fac6 from context=33d82a40-cece-4f93-9dfa-51abf64f29c6 page stack"}
+{"level":30,"time":"2022-12-12T08:05:06.337Z","pid":501,"hostname":"NXQLX146","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2022-12-12T08:05:06.340Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:05:06.341Z","pid":501,"hostname":"NXQLX146","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:05:06.344Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:05:06.344Z","pid":501,"hostname":"NXQLX146","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-12T08:05:08.392Z","pid":501,"hostname":"NXQLX146","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-12-12T08:05:08.393Z","pid":501,"hostname":"NXQLX146","msg":"End of node method closeAllBrowsers"}

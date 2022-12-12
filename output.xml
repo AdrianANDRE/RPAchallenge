@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.8.2 on linux)" generated="20221212 09:04:57.755" rpa="false" schemaversion="3">
+<suite id="s1" name="Csv" source="/home/adrian/browser/tests/csv.robot">
+<test id="s1-t1" name="test" line="7">
+<kw name="StartTheTestCase" library="start">
+<kw name="Open Browser" library="Browser">
+<arg>url=${url}</arg>
+<arg>browser=${browser}</arg>
+<arg>headless=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<msg timestamp="20221212 09:04:58.744" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20221212 09:04:58.748" level="INFO">{"browser": "firefox", "headless": true, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "/home/adrian/browser/browser/traces/d44d38fe-7db5-4b79-973d-61edcbe7cb3a"}</msg>
+<msg timestamp="20221212 09:04:59.748" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"/home/adrian/browser/browser/traces/d44d38fe-7db5-4b79-973d-61edcbe7cb3a"}</msg>
+<msg timestamp="20221212 09:04:59.749" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "hideRfBrowser": false,
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "deprecated_pos_args": []
+}</msg>
+<msg timestamp="20221212 09:04:59.799" level="INFO">Successfully created context. </msg>
+<msg timestamp="20221212 09:04:59.799" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
+<msg timestamp="20221212 09:05:02.765" level="INFO">Successfully initialized new page object and opened url: http://www.rpachallenge.com/</msg>
+<status status="PASS" starttime="20221212 09:04:58.743" endtime="20221212 09:05:02.766"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${start}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:02.766" endtime="20221212 09:05:02.895"/>
+</kw>
+<status status="PASS" starttime="20221212 09:04:58.742" endtime="20221212 09:05:02.896"/>
+</kw>
+<kw name="Interact csv" library="helper">
+<kw name="Get File" library="OperatingSystem">
+<var>${csv}</var>
+<arg>challenge.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20221212 09:05:02.897" level="INFO" html="true">Getting file '&lt;a href="file:///home/adrian/browser/challenge.csv"&gt;/home/adrian/browser/challenge.csv&lt;/a&gt;'.</msg>
+<msg timestamp="20221212 09:05:02.898" level="INFO">${csv} = ﻿First Name,Last Name ,Company Name,Role in Company,Address,Email,Phone Number,
+John,Smith,IT Solutions,Analyst,98 North Road,jsmith@itsolutions.co.uk,40716543298,
+Jane,Dorsey,MediCare,Medical Enginee...</msg>
+<status status="PASS" starttime="20221212 09:05:02.897" endtime="20221212 09:05:02.898"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{read}</var>
+<arg>${csv}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20221212 09:05:02.898" level="INFO">@{read} = [ ﻿First Name,Last Name ,Company Name,Role in Company,Address,Email,Phone Number,
+John,Smith,IT Solutions,Analyst,98 North Road,jsmith@itsolutions.co.uk,40716543298,
+Jane,Dorsey,MediCare,Medical Engin...</msg>
+<status status="PASS" starttime="20221212 09:05:02.898" endtime="20221212 09:05:02.898"/>
+</kw>
+<kw name="Split To Lines" library="String">
+<var>@{lines}</var>
+<arg>@{read}</arg>
+<arg>1</arg>
+<doc>Splits the given string to lines.</doc>
+<msg timestamp="20221212 09:05:02.899" level="INFO">10 lines returned</msg>
+<msg timestamp="20221212 09:05:02.899" level="INFO">@{lines} = [ John,Smith,IT Solutions,Analyst,98 North Road,jsmith@itsolutions.co.uk,40716543298, | Jane,Dorsey,MediCare,Medical Engineer,11 Crown Street,jdorsey@mc.com,40791345621, | Albert,Kipling,Waterfront,Ac...</msg>
+<status status="PASS" starttime="20221212 09:05:02.899" endtime="20221212 09:05:02.899"/>
+</kw>
+<for flavor="IN">
+<var>${person}</var>
+<value>@{lines}</value>
+<iter>
+<var name="${person}">John,Smith,IT Solutions,Analyst,98 North Road,jsmith@itsolutions.co.uk,40716543298,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:02.900" level="INFO">@{split} = [ John | Smith | IT Solutions | Analyst | 98 North Road | jsmith@itsolutions.co.uk | 40716543298 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:02.900" endtime="20221212 09:05:02.901"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:02.902" level="INFO">Fills the text 'John' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:02.901" endtime="20221212 09:05:02.994"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:02.995" level="INFO">Fills the text 'Smith' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:02.994" endtime="20221212 09:05:03.031"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.032" level="INFO">Fills the text 'IT Solutions' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.032" endtime="20221212 09:05:03.068"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.069" level="INFO">Fills the text 'Analyst' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.068" endtime="20221212 09:05:03.101"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.101" level="INFO">Fills the text '98 North Road' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.101" endtime="20221212 09:05:03.130"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.131" level="INFO">Fills the text 'jsmith@itsolutions.co.uk' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.131" endtime="20221212 09:05:03.163"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.164" level="INFO">Fills the text '40716543298' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.163" endtime="20221212 09:05:03.196"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:03.196" endtime="20221212 09:05:03.301"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:02.901" endtime="20221212 09:05:03.301"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:02.900" endtime="20221212 09:05:03.302"/>
+</iter>
+<iter>
+<var name="${person}">Jane,Dorsey,MediCare,Medical Engineer,11 Crown Street,jdorsey@mc.com,40791345621,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:03.303" level="INFO">@{split} = [ Jane | Dorsey | MediCare | Medical Engineer | 11 Crown Street | jdorsey@mc.com | 40791345621 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:03.302" endtime="20221212 09:05:03.303"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.304" level="INFO">Fills the text 'Jane' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.304" endtime="20221212 09:05:03.333"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.334" level="INFO">Fills the text 'Dorsey' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.333" endtime="20221212 09:05:03.361"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.362" level="INFO">Fills the text 'MediCare' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.361" endtime="20221212 09:05:03.390"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.392" level="INFO">Fills the text 'Medical Engineer' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.391" endtime="20221212 09:05:03.416"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.417" level="INFO">Fills the text '11 Crown Street' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.417" endtime="20221212 09:05:03.447"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.448" level="INFO">Fills the text 'jdorsey@mc.com' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.447" endtime="20221212 09:05:03.473"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.474" level="INFO">Fills the text '40791345621' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.474" endtime="20221212 09:05:03.501"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:03.501" endtime="20221212 09:05:03.600"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:03.303" endtime="20221212 09:05:03.600"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:03.302" endtime="20221212 09:05:03.600"/>
+</iter>
+<iter>
+<var name="${person}">Albert,Kipling,Waterfront,Accountant,22 Guild Street,kipling@waterfront.com,40735416854,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:03.601" level="INFO">@{split} = [ Albert | Kipling | Waterfront | Accountant | 22 Guild Street | kipling@waterfront.com | 40735416854 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:03.601" endtime="20221212 09:05:03.601"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.603" level="INFO">Fills the text 'Albert' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.602" endtime="20221212 09:05:03.631"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.632" level="INFO">Fills the text 'Kipling' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.631" endtime="20221212 09:05:03.660"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.661" level="INFO">Fills the text 'Waterfront' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.661" endtime="20221212 09:05:03.687"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.688" level="INFO">Fills the text 'Accountant' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.687" endtime="20221212 09:05:03.712"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.712" level="INFO">Fills the text '22 Guild Street' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.712" endtime="20221212 09:05:03.737"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.738" level="INFO">Fills the text 'kipling@waterfront.com' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.738" endtime="20221212 09:05:03.762"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.763" level="INFO">Fills the text '40735416854' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.763" endtime="20221212 09:05:03.788"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:03.789" endtime="20221212 09:05:03.893"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:03.602" endtime="20221212 09:05:03.893"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:03.601" endtime="20221212 09:05:03.894"/>
+</iter>
+<iter>
+<var name="${person}">Michael,Robertson,MediCare,IT Specialist,17 Farburn Terrace,mrobertson@mc.com,40733652145,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:03.895" level="INFO">@{split} = [ Michael | Robertson | MediCare | IT Specialist | 17 Farburn Terrace | mrobertson@mc.com | 40733652145 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:03.894" endtime="20221212 09:05:03.895"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.896" level="INFO">Fills the text 'Michael' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.896" endtime="20221212 09:05:03.923"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.923" level="INFO">Fills the text 'Robertson' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.923" endtime="20221212 09:05:03.947"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.948" level="INFO">Fills the text 'MediCare' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.947" endtime="20221212 09:05:03.973"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.975" level="INFO">Fills the text 'IT Specialist' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.974" endtime="20221212 09:05:03.999"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:03.999" level="INFO">Fills the text '17 Farburn Terrace' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:03.999" endtime="20221212 09:05:04.028"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.029" level="INFO">Fills the text 'mrobertson@mc.com' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.028" endtime="20221212 09:05:04.052"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.053" level="INFO">Fills the text '40733652145' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.053" endtime="20221212 09:05:04.080"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:04.081" endtime="20221212 09:05:04.178"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:03.895" endtime="20221212 09:05:04.178"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:03.894" endtime="20221212 09:05:04.178"/>
+</iter>
+<iter>
+<var name="${person}">Doug,Derrick,Timepath Inc.,Analyst,99 Shire Oak Road,dderrick@timepath.co.uk,40799885412,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:04.179" level="INFO">@{split} = [ Doug | Derrick | Timepath Inc. | Analyst | 99 Shire Oak Road | dderrick@timepath.co.uk | 40799885412 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:04.179" endtime="20221212 09:05:04.179"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.181" level="INFO">Fills the text 'Doug' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.180" endtime="20221212 09:05:04.213"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.213" level="INFO">Fills the text 'Derrick' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.213" endtime="20221212 09:05:04.235"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.236" level="INFO">Fills the text 'Timepath Inc.' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.236" endtime="20221212 09:05:04.259"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.260" level="INFO">Fills the text 'Analyst' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.260" endtime="20221212 09:05:04.284"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.285" level="INFO">Fills the text '99 Shire Oak Road' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.284" endtime="20221212 09:05:04.313"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.314" level="INFO">Fills the text 'dderrick@timepath.co.uk' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.313" endtime="20221212 09:05:04.340"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.341" level="INFO">Fills the text '40799885412' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.340" endtime="20221212 09:05:04.367"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:04.367" endtime="20221212 09:05:04.467"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:04.180" endtime="20221212 09:05:04.468"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:04.178" endtime="20221212 09:05:04.468"/>
+</iter>
+<iter>
+<var name="${person}">Jessie,Marlowe,Aperture Inc.,Scientist,27 Cheshire Street,jmarlowe@aperture.us,40733154268,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:04.469" level="INFO">@{split} = [ Jessie | Marlowe | Aperture Inc. | Scientist | 27 Cheshire Street | jmarlowe@aperture.us | 40733154268 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:04.469" endtime="20221212 09:05:04.469"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.471" level="INFO">Fills the text 'Jessie' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.470" endtime="20221212 09:05:04.496"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.497" level="INFO">Fills the text 'Marlowe' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.497" endtime="20221212 09:05:04.520"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.521" level="INFO">Fills the text 'Aperture Inc.' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.520" endtime="20221212 09:05:04.546"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.547" level="INFO">Fills the text 'Scientist' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.546" endtime="20221212 09:05:04.571"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.572" level="INFO">Fills the text '27 Cheshire Street' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.572" endtime="20221212 09:05:04.595"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.595" level="INFO">Fills the text 'jmarlowe@aperture.us' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.595" endtime="20221212 09:05:04.617"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.618" level="INFO">Fills the text '40733154268' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.618" endtime="20221212 09:05:04.641"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:04.641" endtime="20221212 09:05:04.749"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:04.469" endtime="20221212 09:05:04.750"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:04.468" endtime="20221212 09:05:04.750"/>
+</iter>
+<iter>
+<var name="${person}">Stan,Hamm,Sugarwell,Advisor,10 Dam Road,shamm@sugarwell.org,40712462257,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:04.751" level="INFO">@{split} = [ Stan | Hamm | Sugarwell | Advisor | 10 Dam Road | shamm@sugarwell.org | 40712462257 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:04.750" endtime="20221212 09:05:04.751"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.752" level="INFO">Fills the text 'Stan' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.752" endtime="20221212 09:05:04.779"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.780" level="INFO">Fills the text 'Hamm' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.780" endtime="20221212 09:05:04.803"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.804" level="INFO">Fills the text 'Sugarwell' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.804" endtime="20221212 09:05:04.830"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.830" level="INFO">Fills the text 'Advisor' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.830" endtime="20221212 09:05:04.853"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.854" level="INFO">Fills the text '10 Dam Road' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.853" endtime="20221212 09:05:04.877"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.878" level="INFO">Fills the text 'shamm@sugarwell.org' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.878" endtime="20221212 09:05:04.901"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:04.901" level="INFO">Fills the text '40712462257' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:04.901" endtime="20221212 09:05:04.927"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:04.928" endtime="20221212 09:05:05.019"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:04.751" endtime="20221212 09:05:05.019"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:04.750" endtime="20221212 09:05:05.020"/>
+</iter>
+<iter>
+<var name="${person}">Michelle,Norton,Aperture Inc.,Scientist,13 White Rabbit Street,mnorton@aperture.us,40731254562,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:05.021" level="INFO">@{split} = [ Michelle | Norton | Aperture Inc. | Scientist | 13 White Rabbit Street | mnorton@aperture.us | 40731254562 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:05.020" endtime="20221212 09:05:05.021"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.023" level="INFO">Fills the text 'Michelle' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.022" endtime="20221212 09:05:05.051"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.052" level="INFO">Fills the text 'Norton' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.052" endtime="20221212 09:05:05.076"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.076" level="INFO">Fills the text 'Aperture Inc.' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.076" endtime="20221212 09:05:05.100"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.101" level="INFO">Fills the text 'Scientist' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.100" endtime="20221212 09:05:05.126"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.127" level="INFO">Fills the text '13 White Rabbit Street' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.126" endtime="20221212 09:05:05.150"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.150" level="INFO">Fills the text 'mnorton@aperture.us' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.150" endtime="20221212 09:05:05.173"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.174" level="INFO">Fills the text '40731254562' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.173" endtime="20221212 09:05:05.197"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:05.197" endtime="20221212 09:05:05.307"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:05.021" endtime="20221212 09:05:05.307"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:05.020" endtime="20221212 09:05:05.308"/>
+</iter>
+<iter>
+<var name="${person}">Stacy,Shelby,TechDev,HR Manager,19 Pineapple Boulevard,sshelby@techdev.com,40741785214,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:05.309" level="INFO">@{split} = [ Stacy | Shelby | TechDev | HR Manager | 19 Pineapple Boulevard | sshelby@techdev.com | 40741785214 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:05.308" endtime="20221212 09:05:05.309"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.310" level="INFO">Fills the text 'Stacy' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.310" endtime="20221212 09:05:05.334"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.335" level="INFO">Fills the text 'Shelby' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.334" endtime="20221212 09:05:05.359"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.359" level="INFO">Fills the text 'TechDev' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.359" endtime="20221212 09:05:05.382"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.383" level="INFO">Fills the text 'HR Manager' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.382" endtime="20221212 09:05:05.411"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.412" level="INFO">Fills the text '19 Pineapple Boulevard' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.411" endtime="20221212 09:05:05.436"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.437" level="INFO">Fills the text 'sshelby@techdev.com' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.436" endtime="20221212 09:05:05.461"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.462" level="INFO">Fills the text '40741785214' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.462" endtime="20221212 09:05:05.484"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:05.485" endtime="20221212 09:05:05.571"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:05.309" endtime="20221212 09:05:05.571"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:05.308" endtime="20221212 09:05:05.571"/>
+</iter>
+<iter>
+<var name="${person}">Lara,Palmer,Timepath Inc.,Programmer,87 Orange Street,lpalmer@timepath.co.uk,40731653845,</var>
+<kw name="Split String" library="String">
+<var>@{split}</var>
+<arg>${person}</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20221212 09:05:05.572" level="INFO">@{split} = [ Lara | Palmer | Timepath Inc. | Programmer | 87 Orange Street | lpalmer@timepath.co.uk | 40731653845 |  ]</msg>
+<status status="PASS" starttime="20221212 09:05:05.572" endtime="20221212 09:05:05.572"/>
+</kw>
+<kw name="input data" library="page">
+<arg>${split}[0]</arg>
+<arg>${split}[1]</arg>
+<arg>${split}[2]</arg>
+<arg>${split}[3]</arg>
+<arg>${split}[4]</arg>
+<arg>${split}[5]</arg>
+<arg>${split}[6]</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[firstname]</arg>
+<arg>${firstname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.574" level="INFO">Fills the text 'Lara' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.574" endtime="20221212 09:05:05.602"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[lastname]</arg>
+<arg>${lastname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.603" level="INFO">Fills the text 'Palmer' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.603" endtime="20221212 09:05:05.626"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[companyname]</arg>
+<arg>${companyname}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.627" level="INFO">Fills the text 'Timepath Inc.' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.627" endtime="20221212 09:05:05.648"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[rolecompagny]</arg>
+<arg>${rolecompagny}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.649" level="INFO">Fills the text 'Programmer' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.649" endtime="20221212 09:05:05.671"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[address]</arg>
+<arg>${address}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.671" level="INFO">Fills the text '87 Orange Street' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.671" endtime="20221212 09:05:05.694"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[email]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.695" level="INFO">Fills the text 'lpalmer@timepath.co.uk' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.694" endtime="20221212 09:05:05.720"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${locatorRPA}[phonenumber]</arg>
+<arg>${phonenumber}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20221212 09:05:05.721" level="INFO">Fills the text '40731653845' in the given field.</msg>
+<status status="PASS" starttime="20221212 09:05:05.721" endtime="20221212 09:05:05.743"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${locatorRPA}[buttonsubmit]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20221212 09:05:05.743" endtime="20221212 09:05:05.851"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:05.573" endtime="20221212 09:05:05.851"/>
+</kw>
+<status status="PASS" starttime="20221212 09:05:05.571" endtime="20221212 09:05:05.851"/>
+</iter>
+<status status="PASS" starttime="20221212 09:05:02.899" endtime="20221212 09:05:05.852"/>
+</for>
+<status status="PASS" starttime="20221212 09:05:02.896" endtime="20221212 09:05:05.852"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20221212 09:05:05.915" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221212 09:05:05.853" endtime="20221212 09:05:05.916"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20221212 09:05:06.338" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20221212 09:05:05.917" endtime="20221212 09:05:06.338"/>
+</kw>
+<status status="PASS" starttime="20221212 09:04:58.738" endtime="20221212 09:05:06.339"/>
+</test>
+<status status="PASS" starttime="20221212 09:04:57.758" endtime="20221212 09:05:06.343"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Csv">Csv</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221212 09:04:58.744" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
